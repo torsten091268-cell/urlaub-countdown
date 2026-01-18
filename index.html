@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Urlaub Countdown</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#7ed6c2" />
+
+  <!-- iOS PWA hints -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Urlaub" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+</head>
+
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="title">Ägypten 2026</div>
+      <div class="sub">München → Hurghada · 04.07.2026 · 08:15</div>
+    </header>
+
+    <main class="card">
+      <div class="countdown">
+        <div class="days" id="daysLine">Noch 0 Tage</div>
+        <div class="time" id="timeLine">00:00:00</div>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <button id="pickBg" class="btn">Hintergrund wählen</button>
+      <button id="resetBg" class="btn ghost">Reset</button>
+
+      <!-- unsichtbarer File-Picker -->
+      <input id="bgFile" type="file" accept="image/*" hidden />
+    </footer>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
